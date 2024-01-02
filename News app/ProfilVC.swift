@@ -9,21 +9,40 @@ import UIKit
 
 class ProfilVC: UIViewController {
 
+    @IBOutlet weak var usernameLbl: UILabel!
+    @IBOutlet weak var editUserNameTF: UITextField!
+    @IBOutlet weak var editCountryBtn: UITextField!
+    @IBOutlet weak var editBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        editBtn.layer.cornerRadius = 15
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func logOutBtn(_ sender: UIButton) {
+        
+        let alert = UIAlertController(title: "Haqiqatdan ham ilovadan chiqib ketmoqchimisiz?", message: nil, preferredStyle: .alert)
+        
+        let ha = UIAlertAction(title: "Ha", style: .default) { _ in
+            
+            let vc = SingUPVC(nibName: "SingUPVC", bundle: nil)
+            
+            vc.modalTransitionStyle = .coverVertical
+            vc.modalPresentationStyle = .fullScreen
+            
+            self.present(vc, animated: true)
+        }
+        
+        let orqaga = UIAlertAction(title: "Orqaga", style: .cancel)
+        
+        alert.addAction(orqaga)
+        alert.addAction(ha)
+        
+        self.present(alert, animated: true)
+        
     }
-    */
-
+    
+    @IBAction func editBtn(_ sender: UIButton) {
+    }
+    
 }

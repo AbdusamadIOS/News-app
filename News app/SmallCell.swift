@@ -9,9 +9,13 @@ import UIKit
 
 class SmallCell: UICollectionViewCell {
 
+    @IBOutlet weak var newsImage: UIImageView!
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var descLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+      
+        newsImage.layer.cornerRadius = 15
     }
 
 }
