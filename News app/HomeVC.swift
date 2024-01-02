@@ -68,7 +68,7 @@ class HomeVC: UIViewController {
     }
     
     func getNews() {
-        let urelString = "https://newsapi.org/v2/everything?domains=wsj.com&apiKey=b53e7747c4764f119dc0925d2bd42476"
+        let urelString = "https://newsapi.org/v2/everything?q=apple&from=2024-01-01&to=2024-01-01&sortBy=popularity&apiKey=b53e7747c4764f119dc0925d2bd42476"
 
         
   /*  "https://newsapi.org/v2/everything?q=tesla&from=2023-10-16&sortBy=publishedAt&apiKey=b53e7747c4764f119dc0925d2bd42476"
