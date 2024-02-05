@@ -17,7 +17,7 @@ var window: UIWindow?
         
         window = UIWindow()
         
-        let vc = SingUPVC(nibName: "SingUPVC", bundle: nil)
+        let vc = SingUp(nibName: "SingUp", bundle: nil)
         self.window?.rootViewController = vc
         self.window?.makeKeyAndVisible()
         

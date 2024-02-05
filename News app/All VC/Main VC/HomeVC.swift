@@ -16,6 +16,7 @@ class HomeVC: UIViewController {
     
     var articles: [Articles] = []
     var city = "America"
+    var currentDate = Date()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +24,8 @@ class HomeVC: UIViewController {
         setupColView()
         getNews()
         getCurrentweather(for: city)
+        print(currentDate)
     }
-    
     func setupColView() {
         
         collectionView.dataSource = self
@@ -68,8 +69,8 @@ class HomeVC: UIViewController {
     }
     
     func getNews() {
-        let urelString = "https://newsapi.org/v2/everything?q=apple&from=2024-01-01&to=2024-01-01&sortBy=popularity&apiKey=b53e7747c4764f119dc0925d2bd42476"
-
+       
+        let urelString =  "https://newsapi.org/v2/everything?q=apple&from=2024-02-04&to=2024-02-04&sortBy=popularity&apiKey=b53e7747c4764f119dc0925d2bd42476"
         
   /*  "https://newsapi.org/v2/everything?q=tesla&from=2023-10-16&sortBy=publishedAt&apiKey=b53e7747c4764f119dc0925d2bd42476"
        

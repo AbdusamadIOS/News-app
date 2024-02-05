@@ -9,14 +9,13 @@ import UIKit
 
 class ProfilVC: UIViewController {
 
-    @IBOutlet weak var usernameLbl: UILabel!
-    @IBOutlet weak var editUserNameTF: UITextField!
-    @IBOutlet weak var editCountryBtn: UITextField!
-    @IBOutlet weak var editBtn: UIButton!
+ 
+    @IBOutlet weak var nameLbl: UILabel!
+    @IBOutlet weak var emailLbl: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        editBtn.layer.cornerRadius = 15
     }
 
     @IBAction func logOutBtn(_ sender: UIButton) {
@@ -25,12 +24,12 @@ class ProfilVC: UIViewController {
         
         let ha = UIAlertAction(title: "Ha", style: .default) { _ in
             
-            let vc = SingUPVC(nibName: "SingUPVC", bundle: nil)
-            
+            let vc = SingIn(nibName: "SingIn", bundle: nil)
             vc.modalTransitionStyle = .coverVertical
             vc.modalPresentationStyle = .fullScreen
             
             self.present(vc, animated: true)
+   
         }
         
         let orqaga = UIAlertAction(title: "Orqaga", style: .cancel)
@@ -42,7 +41,5 @@ class ProfilVC: UIViewController {
         
     }
     
-    @IBAction func editBtn(_ sender: UIButton) {
-    }
-    
+   
 }
