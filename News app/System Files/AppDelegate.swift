@@ -16,9 +16,13 @@ var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow()
-        
+        let tabbar = TabbarVC()
         let vc = SingUp(nibName: "SingUp", bundle: nil)
-        self.window?.rootViewController = vc
+        if UserDefaults.standard.bool(forKey: "isLogin") {
+            self.window?.rootViewController = tabbar
+        } else {
+            self.window?.rootViewController = vc
+        }
         self.window?.makeKeyAndVisible()
         
         return true

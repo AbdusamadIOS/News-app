@@ -20,14 +20,17 @@
 		EE96CC142B05042100C4A78F /* BIgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE96CC122B05042100C4A78F /* BIgCell.xib */; };
 		EE96CC172B05043600C4A78F /* SmallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE96CC152B05043600C4A78F /* SmallCell.swift */; };
 		EE96CC182B05043600C4A78F /* SmallCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE96CC162B05043600C4A78F /* SmallCell.xib */; };
-		EEC76B3F2B0B682E0090D024 /* SingUPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC76B3D2B0B682E0090D024 /* SingUPVC.swift */; };
-		EEC76B402B0B682E0090D024 /* SingUPVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEC76B3E2B0B682E0090D024 /* SingUPVC.xib */; };
 		EED11F042B091CB30023C6C4 /* CategoryDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED11F032B091CB30023C6C4 /* CategoryDM.swift */; };
 		EED589A52B06522D00BEDB43 /* NewsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED589A42B06522D00BEDB43 /* NewsDataModel.swift */; };
 		EEEBD77E2B077CB700538DBD /* SeeNewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEBD77C2B077CB700538DBD /* SeeNewsVC.swift */; };
 		EEEBD77F2B077CB700538DBD /* SeeNewsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEEBD77D2B077CB700538DBD /* SeeNewsVC.xib */; };
 		EEEBD7812B07B2FA00538DBD /* ImageSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEBD7802B07B2FA00538DBD /* ImageSetting.swift */; };
 		EEEBD7832B07BFD600538DBD /* WeatherDateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEBD7822B07BFD600538DBD /* WeatherDateModel.swift */; };
+		EEF946132B70E0B3009415F4 /* SingUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF946112B70E0B3009415F4 /* SingUp.swift */; };
+		EEF946142B70E0B3009415F4 /* SingUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEF946122B70E0B3009415F4 /* SingUp.xib */; };
+		EEF946172B70E0C2009415F4 /* SingIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF946152B70E0C2009415F4 /* SingIn.swift */; };
+		EEF946182B70E0C2009415F4 /* SingIn.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEF946162B70E0C2009415F4 /* SingIn.xib */; };
+		EEF946202B70EE9F009415F4 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF9461F2B70EE9F009415F4 /* CoreData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,14 +49,17 @@
 		EE96CC122B05042100C4A78F /* BIgCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BIgCell.xib; sourceTree = "<group>"; };
 		EE96CC152B05043600C4A78F /* SmallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCell.swift; sourceTree = "<group>"; };
 		EE96CC162B05043600C4A78F /* SmallCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SmallCell.xib; sourceTree = "<group>"; };
-		EEC76B3D2B0B682E0090D024 /* SingUPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUPVC.swift; sourceTree = "<group>"; };
-		EEC76B3E2B0B682E0090D024 /* SingUPVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingUPVC.xib; sourceTree = "<group>"; };
 		EED11F032B091CB30023C6C4 /* CategoryDM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDM.swift; sourceTree = "<group>"; };
 		EED589A42B06522D00BEDB43 /* NewsDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDataModel.swift; sourceTree = "<group>"; };
 		EEEBD77C2B077CB700538DBD /* SeeNewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeNewsVC.swift; sourceTree = "<group>"; };
 		EEEBD77D2B077CB700538DBD /* SeeNewsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeeNewsVC.xib; sourceTree = "<group>"; };
 		EEEBD7802B07B2FA00538DBD /* ImageSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSetting.swift; sourceTree = "<group>"; };
 		EEEBD7822B07BFD600538DBD /* WeatherDateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDateModel.swift; sourceTree = "<group>"; };
+		EEF946112B70E0B3009415F4 /* SingUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUp.swift; sourceTree = "<group>"; };
+		EEF946122B70E0B3009415F4 /* SingUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingUp.xib; sourceTree = "<group>"; };
+		EEF946152B70E0C2009415F4 /* SingIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingIn.swift; sourceTree = "<group>"; };
+		EEF946162B70E0C2009415F4 /* SingIn.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingIn.xib; sourceTree = "<group>"; };
+		EEF9461F2B70EE9F009415F4 /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,30 +92,81 @@
 		EE96CBE52B04C50300C4A78F /* News app */ = {
 			isa = PBXGroup;
 			children = (
-				EE96CBE62B04C50300C4A78F /* AppDelegate.swift */,
+				EEF9461E2B70EE70009415F4 /* System Files */,
+				EEF9461C2B70EE14009415F4 /* All VC */,
+				EEF9461D2B70EE53009415F4 /* DataModels */,
+				EE96CBF72B04C50400C4A78F /* Info.plist */,
+				EE96CBEF2B04C50300C4A78F /* News_app.xcdatamodeld */,
+			);
+			path = "News app";
+			sourceTree = "<group>";
+		};
+		EEF946192B70EDCD009415F4 /* Welcome VC */ = {
+			isa = PBXGroup;
+			children = (
+				EEF946112B70E0B3009415F4 /* SingUp.swift */,
+				EEF946122B70E0B3009415F4 /* SingUp.xib */,
+				EEF946152B70E0C2009415F4 /* SingIn.swift */,
+				EEF946162B70E0C2009415F4 /* SingIn.xib */,
+			);
+			path = "Welcome VC";
+			sourceTree = "<group>";
+		};
+		EEF9461A2B70EDE3009415F4 /* Main VC */ = {
+			isa = PBXGroup;
+			children = (
 				EE96CC072B04F23300C4A78F /* TabbarVC.swift */,
-				EEC76B3D2B0B682E0090D024 /* SingUPVC.swift */,
-				EEC76B3E2B0B682E0090D024 /* SingUPVC.xib */,
 				EE96CBFD2B04C5F500C4A78F /* HomeVC.swift */,
 				EE96CBFE2B04C5F500C4A78F /* HomeVC.xib */,
 				EE96CC0D2B04F29000C4A78F /* ProfilVC.swift */,
 				EE96CC0E2B04F29000C4A78F /* ProfilVC.xib */,
 				EEEBD77C2B077CB700538DBD /* SeeNewsVC.swift */,
 				EEEBD77D2B077CB700538DBD /* SeeNewsVC.xib */,
+			);
+			path = "Main VC";
+			sourceTree = "<group>";
+		};
+		EEF9461B2B70EDFD009415F4 /* All Cells */ = {
+			isa = PBXGroup;
+			children = (
 				EE96CC112B05042100C4A78F /* BIgCell.swift */,
 				EE96CC122B05042100C4A78F /* BIgCell.xib */,
 				EE96CC152B05043600C4A78F /* SmallCell.swift */,
 				EE96CC162B05043600C4A78F /* SmallCell.xib */,
+			);
+			path = "All Cells";
+			sourceTree = "<group>";
+		};
+		EEF9461C2B70EE14009415F4 /* All VC */ = {
+			isa = PBXGroup;
+			children = (
+				EEF946192B70EDCD009415F4 /* Welcome VC */,
+				EEF9461A2B70EDE3009415F4 /* Main VC */,
+				EEF9461B2B70EDFD009415F4 /* All Cells */,
+			);
+			path = "All VC";
+			sourceTree = "<group>";
+		};
+		EEF9461D2B70EE53009415F4 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				EEEBD7802B07B2FA00538DBD /* ImageSetting.swift */,
 				EED589A42B06522D00BEDB43 /* NewsDataModel.swift */,
 				EEEBD7822B07BFD600538DBD /* WeatherDateModel.swift */,
-				EEEBD7802B07B2FA00538DBD /* ImageSetting.swift */,
 				EED11F032B091CB30023C6C4 /* CategoryDM.swift */,
-				EE96CBF22B04C50400C4A78F /* Assets.xcassets */,
-				EE96CBF42B04C50400C4A78F /* LaunchScreen.storyboard */,
-				EE96CBF72B04C50400C4A78F /* Info.plist */,
-				EE96CBEF2B04C50300C4A78F /* News_app.xcdatamodeld */,
+				EEF9461F2B70EE9F009415F4 /* CoreData.swift */,
 			);
-			path = "News app";
+			path = DataModels;
+			sourceTree = "<group>";
+		};
+		EEF9461E2B70EE70009415F4 /* System Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE96CBE62B04C50300C4A78F /* AppDelegate.swift */,
+				EE96CBF42B04C50400C4A78F /* LaunchScreen.storyboard */,
+				EE96CBF22B04C50400C4A78F /* Assets.xcassets */,
+			);
+			path = "System Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,11 +227,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEF946182B70E0C2009415F4 /* SingIn.xib in Resources */,
 				EE96CBF62B04C50400C4A78F /* LaunchScreen.storyboard in Resources */,
+				EEF946142B70E0B3009415F4 /* SingUp.xib in Resources */,
 				EEEBD77F2B077CB700538DBD /* SeeNewsVC.xib in Resources */,
 				EE96CC102B04F29000C4A78F /* ProfilVC.xib in Resources */,
 				EE96CC142B05042100C4A78F /* BIgCell.xib in Resources */,
-				EEC76B402B0B682E0090D024 /* SingUPVC.xib in Resources */,
 				EE96CC002B04C5F500C4A78F /* HomeVC.xib in Resources */,
 				EE96CBF32B04C50400C4A78F /* Assets.xcassets in Resources */,
 				EE96CC182B05043600C4A78F /* SmallCell.xib in Resources */,
@@ -192,14 +250,16 @@
 				EEEBD7812B07B2FA00538DBD /* ImageSetting.swift in Sources */,
 				EE96CBE72B04C50300C4A78F /* AppDelegate.swift in Sources */,
 				EED589A52B06522D00BEDB43 /* NewsDataModel.swift in Sources */,
+				EEF946202B70EE9F009415F4 /* CoreData.swift in Sources */,
 				EEEBD7832B07BFD600538DBD /* WeatherDateModel.swift in Sources */,
+				EEF946132B70E0B3009415F4 /* SingUp.swift in Sources */,
 				EE96CC172B05043600C4A78F /* SmallCell.swift in Sources */,
 				EED11F042B091CB30023C6C4 /* CategoryDM.swift in Sources */,
 				EE96CC132B05042100C4A78F /* BIgCell.swift in Sources */,
 				EE96CC082B04F23300C4A78F /* TabbarVC.swift in Sources */,
 				EE96CC0F2B04F29000C4A78F /* ProfilVC.swift in Sources */,
+				EEF946172B70E0C2009415F4 /* SingIn.swift in Sources */,
 				EE96CBF12B04C50300C4A78F /* News_app.xcdatamodeld in Sources */,
-				EEC76B3F2B0B682E0090D024 /* SingUPVC.swift in Sources */,
 				EEEBD77E2B077CB700538DBD /* SeeNewsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +399,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CWJG98258B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "News app/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -366,6 +427,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CWJG98258B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "News app/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

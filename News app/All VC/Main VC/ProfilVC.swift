@@ -23,7 +23,7 @@ class ProfilVC: UIViewController {
         let alert = UIAlertController(title: "Haqiqatdan ham ilovadan chiqib ketmoqchimisiz?", message: nil, preferredStyle: .alert)
         
         let ha = UIAlertAction(title: "Ha", style: .default) { _ in
-            
+            UserDefaults.standard.removeObject(forKey: "isLogin")
             let vc = SingIn(nibName: "SingIn", bundle: nil)
             vc.modalTransitionStyle = .coverVertical
             vc.modalPresentationStyle = .fullScreen

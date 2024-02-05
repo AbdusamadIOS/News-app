@@ -16,15 +16,13 @@ class HomeVC: UIViewController {
     
     var articles: [Articles] = []
     var city = "America"
-    var currentDate = Date()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupColView()
         getNews()
         getCurrentweather(for: city)
-        print(currentDate)
     }
     func setupColView() {
         
@@ -69,30 +67,19 @@ class HomeVC: UIViewController {
     }
     
     func getNews() {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let dateString = dateFormatter.string(from: Date())
+        print(dateString)
+        let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: Date())
+        print(yesterday!)
        
-        let urelString =  "https://newsapi.org/v2/everything?q=apple&from=2024-02-04&to=2024-02-04&sortBy=popularity&apiKey=b53e7747c4764f119dc0925d2bd42476"
-        
-  /*  "https://newsapi.org/v2/everything?q=tesla&from=2023-10-16&sortBy=publishedAt&apiKey=b53e7747c4764f119dc0925d2bd42476"
-       
-       https://newsapi.org/v2/everything?q=tesla&from=2023-10-17&sortBy=publishedAt&apiKey=b53e7747c4764f119dc0925d2bd42476
-       
-       https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=b53e7747c4764f119dc0925d2bd42476
-       
-       https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=b53e7747c4764f119dc0925d2bd42476
-       
-       https://newsapi.org/v2/everything?domains=wsj.com&apiKey=b53e7747c4764f119dc0925d2bd42476
-       
-       https://newsapi.org/v2/everything?q=apple&from=2023-11-16&to=2023-11-16&sortBy=popularity&apiKey=b53e7747c4764f119dc0925d2bd42476
-       */
+        let urelString =  "https://newsapi.org/v2/everything?q=apple&from=\(String(dateString))&to=2024-02-04&sortBy=popularity&apiKey=b53e7747c4764f119dc0925d2bd42476"
         
         guard let url = URL(string: urelString) else {return}
-    
         let request = URLRequest(url: url)
-        
         let session = URLSession(configuration: .default)
-        
         let task = session.dataTask(with: request) { data, response, error in
-            
             
             DispatchQueue.main.async {
                 
@@ -113,23 +100,16 @@ class HomeVC: UIViewController {
             }
         }
         task.resume()
-        
     }
-    
     func getCurrentweather(for city: String) {
         
         let urlString = "https://api.weatherapi.com/v1/forecast.json?key=11ffd290d26f4ebcb4854359230610&q=\(city)&days=1&aqi=no&alerts=no"
         
         guard let url = URL(string: urlString) else  {return }
-        
         let request = URLRequest(url: url)
-        
         let session = URLSession(configuration: .default)
-        
         let task = session.dataTask(with: request) {data, response, error in
-            
             guard let data, error == nil else {
-                
                 DispatchQueue.main.async {
                     self.showAlert(with: error?.localizedDescription)
                 }
@@ -142,9 +122,7 @@ class HomeVC: UIViewController {
               
                 DispatchQueue.main.async {
                     self.UpdateUI(weather: weather)
-            
                 }
-                
             } catch  {
                 DispatchQueue.main.async {
                     self.showAlertWeather(with: error.localizedDescription)
@@ -153,7 +131,6 @@ class HomeVC: UIViewController {
             }
         }
         task.resume()
-        
     }
         func big()-> NSCollectionLayoutSection {
             
@@ -192,7 +169,6 @@ class HomeVC: UIViewController {
                 widthDimension: .fractionalWidth(1),
                 heightDimension: .fractionalHeight(1))
             let item = NSCollectionLayoutItem(layoutSize: itemSize)
-            
             item.contentInsets = NSDirectionalEdgeInsets(
                 top: 5,
                 leading: 5,
@@ -219,7 +195,6 @@ class HomeVC: UIViewController {
                 trailing: 5)
             
             return section
-            
         }
     }
 
@@ -236,9 +211,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
             return articles.count * 2 / 3
         }
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         switch indexPath.section {
         case 0:
             
@@ -257,22 +230,17 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
             cellSmall.newsImage.setImage(by: URL(string: article.urlToImage ?? "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fvector%2Fno-image-available-photo-coming-soon-gm1392182937-448510205&psig=AOvVaw3sFZNOTMmgbvG7zH3ZSkDc&ust=1700302080396000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCODtpP7kyoIDFQAAAAAdAAAAABAJ"))
             return cellSmall
         }
-        
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
         switch indexPath.item {
         case 0:
-            
             let see = SeeNewsVC(nibName: "SeeNewsVC", bundle: nil)
             see.seeArticle = articles[indexPath.item + articles.count * 2 / 3]
             see.modalTransitionStyle = .coverVertical
             see.modalPresentationStyle = .formSheet
-            
             self.present(see, animated: true)
-            
         default:
-            
             let see2 = SeeNewsVC(nibName: "SeeNewsVC", bundle: nil)
             see2.seeArticle = articles[indexPath.item + articles.count * 1 / 3]
             see2.modalTransitionStyle = .coverVertical
@@ -281,7 +249,4 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
             self.present(see2, animated: true)
         }
     }
-    
-
-    
 }
