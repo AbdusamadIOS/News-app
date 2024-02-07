@@ -9,7 +9,6 @@ import UIKit
 import CoreData
 
 class SingUp: UIViewController {
-
     @IBOutlet weak var conteneirView: UIView!
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var emailTF: UITextField!

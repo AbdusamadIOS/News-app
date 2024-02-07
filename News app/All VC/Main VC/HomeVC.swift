@@ -24,6 +24,7 @@ class HomeVC: UIViewController {
         getNews()
         getCurrentweather(for: city)
     }
+    // TODO: CollectionView Setting
     func setupColView() {
         
         collectionView.dataSource = self
@@ -42,14 +43,14 @@ class HomeVC: UIViewController {
         }
         collectionView.setCollectionViewLayout(layout, animated: true)
     }
-    
+    // TODO: Error  news api alert
     func showAlert(with title: String?) {
         let alert = UIAlertController(title: title, message: "news api error", preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .default)
         alert.addAction(ok)
         self.present(alert, animated: true)
     }
-    
+    // TODO: Error  weather api alert
     func showAlertWeather(with title: String?) {
         
         let alert = UIAlertController(title: title, message: "weather api error", preferredStyle: .alert)
@@ -58,23 +59,27 @@ class HomeVC: UIViewController {
         self.present(alert, animated: true)
         
     }
-    
+    // TODO: UpdateUi weather
     func UpdateUI(weather: CurrentResponse ) {
         
         tempLbl.text = "\(String(Int(weather.current.temp_c)))℃"
         weatherImage.setImage(by: URL(string: "https:" + weather.current.condition.icon))
         sanaLbl.text = "\(weather.current.last_updated.prefix(10))"
     }
-    
+    // TODO: Get news funcktion
     func getNews() {
+        // Current date format
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let dateString = dateFormatter.string(from: Date())
         print(dateString)
-        let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: Date())
-        print(yesterday!)
-       
-        let urelString =  "https://newsapi.org/v2/everything?q=apple&from=\(String(dateString))&to=2024-02-04&sortBy=popularity&apiKey=b53e7747c4764f119dc0925d2bd42476"
+       // Yesterday date format
+        let currentDate = Date()
+        let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: currentDate)!
+        let formattedYesterday = dateFormatter.string(from: yesterday)
+        print(formattedYesterday)
+        // News api url
+        let urelString =  "https://newsapi.org/v2/everything?q=apple&from=\(String(dateString))&to=\(String(formattedYesterday))&sortBy=popularity&apiKey=b53e7747c4764f119dc0925d2bd42476"
         
         guard let url = URL(string: urelString) else {return}
         let request = URLRequest(url: url)
@@ -101,8 +106,9 @@ class HomeVC: UIViewController {
         }
         task.resume()
     }
+    // TODO: Current weather funcktion
     func getCurrentweather(for city: String) {
-        
+        // weather api url
         let urlString = "https://api.weatherapi.com/v1/forecast.json?key=11ffd290d26f4ebcb4854359230610&q=\(city)&days=1&aqi=no&alerts=no"
         
         guard let url = URL(string: urlString) else  {return }
@@ -132,6 +138,8 @@ class HomeVC: UIViewController {
         }
         task.resume()
     }
+    
+    // TODO: Big cell NSCollectionLayoutSection
         func big()-> NSCollectionLayoutSection {
             
             let itemSize = NSCollectionLayoutSize(
@@ -163,6 +171,7 @@ class HomeVC: UIViewController {
             return section
             
         }
+    // TODO: Small cell NSCollectionLayoutSection
         func small() -> NSCollectionLayoutSection {
             
             let itemSize = NSCollectionLayoutSize(
@@ -198,6 +207,7 @@ class HomeVC: UIViewController {
         }
     }
 
+// MARK: Extension Collection View Delegate and Datasource
 extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {

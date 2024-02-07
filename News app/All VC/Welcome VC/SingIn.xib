@@ -44,7 +44,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HGd-rk-1Kg">
                     <rect key="frame" x="52.666666666666657" y="299" width="288" height="254"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="VIm-0a-yba">
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="bottom" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="VIm-0a-yba">
                             <rect key="frame" x="20" y="35.666666666666686" width="248" height="183"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AcH-Ko-0fA">
@@ -61,7 +61,10 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72Z-5J-eHk">
-                                    <rect key="frame" x="0.0" y="138" width="248" height="45"/>
+                                    <rect key="frame" x="164" y="138" width="84" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="84" id="4Ia-52-Ptl"/>
+                                    </constraints>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="Sing Up"/>
                                     <connections>
@@ -69,6 +72,10 @@
                                     </connections>
                                 </button>
                             </subviews>
+                            <constraints>
+                                <constraint firstItem="AcH-Ko-0fA" firstAttribute="leading" secondItem="VIm-0a-yba" secondAttribute="leading" id="d3P-EG-4rw"/>
+                                <constraint firstItem="QXf-Mu-pmJ" firstAttribute="leading" secondItem="VIm-0a-yba" secondAttribute="leading" id="h14-JP-76l"/>
+                            </constraints>
                         </stackView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>

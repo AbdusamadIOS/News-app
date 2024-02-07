@@ -8,29 +8,20 @@
 import UIKit
 
 class TabbarVC: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // Home View Controller
         let home = HomeVC(nibName: "HomeVC", bundle: nil)
         home.tabBarItem.title = "Home"
         home.tabBarItem.image = UIImage(systemName: "house")
-        
+        // Profil View Controller 
         let profil = ProfilVC(nibName: "ProfilVC", bundle: nil)
         profil.tabBarItem.title = "Profile"
         profil.tabBarItem.image = UIImage(systemName: "person")
         
         viewControllers = [home, profil]
-        
         tabBar.tintColor = .systemIndigo
-      
-       
-      
-        
         
     }
-    
-
-    
-
 }

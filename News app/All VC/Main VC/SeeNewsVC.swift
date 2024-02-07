@@ -23,6 +23,7 @@ class SeeNewsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         newImage.layer.cornerRadius = 15
+        // See Image
         if let seeArticle {
             
             newDescLbl.text = seeArticle.description
@@ -35,6 +36,7 @@ class SeeNewsVC: UIViewController {
         
     }
 
+    // TODO: Like and Dislike Button
     @IBAction func likeBtn(_ sender: Any) {
         
         if likeBtn.tintColor == UIColor.white {
@@ -48,7 +50,6 @@ class SeeNewsVC: UIViewController {
             let num1 = Int(likeNumberLbl.text!)
             let numMinus = num1! - 1
             likeNumberLbl.text = String(numMinus)
-           
             
         }
     }
@@ -68,10 +69,9 @@ class SeeNewsVC: UIViewController {
             dislikeNumberLbl.text = String(numMinus)
         }
     }
-    
+    // TODO: Dismiss Button
     @IBAction func disBtn(_ sender: UIButton) {
         
         dismiss(animated: true)
     }
-    
 }

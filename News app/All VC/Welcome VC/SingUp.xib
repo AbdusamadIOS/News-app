@@ -29,7 +29,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7xn-cJ-XPv">
                     <rect key="frame" x="52.666666666666657" y="299" width="288" height="254"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="rbB-6F-cyC">
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="bottom" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="rbB-6F-cyC">
                             <rect key="frame" x="20" y="35.666666666666686" width="248" height="183"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ngq-Pj-fUa">
@@ -42,11 +42,17 @@
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gyy-cl-LUC">
                                     <rect key="frame" x="0.0" y="69" width="248" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="7mW-Xq-Kir"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJq-tT-yif">
-                                    <rect key="frame" x="0.0" y="138" width="248" height="45"/>
+                                    <rect key="frame" x="181" y="138" width="67" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="67" id="no5-rZ-h0m"/>
+                                    </constraints>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="Login"/>
                                     <connections>
@@ -54,6 +60,10 @@
                                     </connections>
                                 </button>
                             </subviews>
+                            <constraints>
+                                <constraint firstItem="ngq-Pj-fUa" firstAttribute="leading" secondItem="rbB-6F-cyC" secondAttribute="leading" id="pC5-RL-cj8"/>
+                                <constraint firstItem="gyy-cl-LUC" firstAttribute="leading" secondItem="rbB-6F-cyC" secondAttribute="leading" id="rQq-Hp-YSj"/>
+                            </constraints>
                         </stackView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
